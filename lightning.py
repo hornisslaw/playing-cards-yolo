@@ -56,15 +56,16 @@ class PlayingCardsDataModule(pl.LightningDataModule):
         self.num_classes = num_classes
 
     def prepare_data(self):
-        if not self.is_small_dataset:
-            # TODO: change to subprocess
-            # download full playing cards dataset
-            ! gdown 1COhcBiGMlSwqYY62oo8nbSxKMSYbHStC
-            ! unzip -q playing_cards.zip && rm playing_cards.zip
-        else:
-            # download mini playing cards dataset
-            ! gdown 1etYyC3Ws-GW01U0FEUAsAcuP273OwS7N
-            ! unzip -q playing_cards_small.zip && rm playing_cards_small.zip
+#         if not self.is_small_dataset:
+#             # TODO: change to subprocess
+#             # download full playing cards dataset
+#             ! gdown 1COhcBiGMlSwqYY62oo8nbSxKMSYbHStC
+#             ! unzip -q playing_cards.zip && rm playing_cards.zip
+#         else:
+#             # download mini playing cards dataset
+#             ! gdown 1etYyC3Ws-GW01U0FEUAsAcuP273OwS7N
+#             ! unzip -q playing_cards_small.zip && rm playing_cards_small.zip
+        pass
 
     def setup(self, stage=None):
         # train/val
