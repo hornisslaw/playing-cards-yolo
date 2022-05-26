@@ -7,7 +7,7 @@ def check_class_accuracy(outputs, labels, epsilon=1e-16, conf_threshold=CONF_THR
     correct_class, correct_noobj, correct_obj = 0, 0, 0
 
     for out, label in zip(outputs, labels):
-        label.to(DEVICE)
+        label = label.to(DEVICE)
         is_object = label[..., 0] == 1
         no_object = label[..., 0] == 0
 
