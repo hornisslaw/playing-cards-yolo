@@ -214,10 +214,10 @@ def get_evaluation_bboxes(predictions, labels, batch_size, device=DEVICE):
                 targets["labels"].append(box[0])
     
     for k, v in preds.items():
-        preds[k] = torch.tensor(v)
+        preds[k] = torch.tensor(v, device=DEVICE)
     
     for k, v in targets.items():
-        targets[k] = torch.tensor(v)
+        targets[k] = torch.tensor(v, device=DEVICE)
     
     return preds, targets
 
